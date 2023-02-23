@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Menu() {
+  const navigate = useNavigate();
   return (
     <div>
       <ul className="menu">
+        <li>
+          <a href="#/" onClick={() => navigate(-1)}>
+            Geri
+          </a>
+        </li>
         <li>
           <Link to="/">Anasayfa</Link>
         </li>

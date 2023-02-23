@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Users from "./pages/Users";
 import Contact from "./pages/Contact";
 import Menu from "./components/Menu";
+import UserDetail from "./pages/UserDetail";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* <Route path="/" element={<App />}> */}
         <Route index element={<Home />} />
         <Route path="users" element={<Users />} />
+        <Route path="users/:id" element={<UserDetail />} />
         <Route path="contact" element={<Contact />} />
         {/* <Route path="teams" element={<Teams/>}>
           <Route path=":teamId" element={<Team />} />
