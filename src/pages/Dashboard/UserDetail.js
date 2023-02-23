@@ -7,7 +7,7 @@ function UserDetail() {
   const [user, setUser] = useState(location.state);
 
   useEffect(() => {
-    if (!user.id) {
+    if (!user?.id) {
       fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then((res) => res.json())
         .then((data) => setUser(data));
