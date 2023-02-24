@@ -7,12 +7,12 @@ import Users from "./pages/Dashboard/Users";
 import Contact from "./pages/Dashboard/Contact";
 import UserDetail from "./pages/Dashboard/UserDetail";
 import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import Error404 from "./pages/Error404";
 
 // layouts
 import AuthLayout from "./layouts/Auth";
 import DashboardLayout from "./layouts/Dashboard";
-import Register from "./pages/Auth/Register";
-import Error404 from "./pages/Error404";
 
 function App() {
   return (
