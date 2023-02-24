@@ -1,4 +1,5 @@
-ul,li{
+ul,
+li {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -9,4 +10,17 @@ ul,li{
   border-bottom: solid 1px #cccccc;
   padding: 10px 0;
   column-gap: 10px;
+}
+
+.form > div {
+  margin-bottom: 10px;
+}
+
+.form > div > label {
+  display: block;
+}
+
+.form > div > input,
+.form > div > textarea {
+  padding: 8px;
 }
