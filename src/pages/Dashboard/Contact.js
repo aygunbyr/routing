@@ -7,12 +7,14 @@ function Contact() {
     errors,
     handleBlur,
     handleChange,
+    handleReset,
     handleSubmit,
     isSubmitting,
     touched,
     values,
+    resetForm,
   } = useFormik({
-    initialValues: { email: "", password: "", message: "" },
+    initialValues: { email: "deneme@gmail.com", password: "", message: "" },
     validate: (values) => {
       const errors = {};
       if (!values.email) {
@@ -28,6 +30,7 @@ function Contact() {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
+        resetForm();
       }, 400);
     },
   });
@@ -46,6 +49,7 @@ function Contact() {
             onBlur={handleBlur}
             value={values.email}
             placeholder="Email"
+            disabled={isSubmitting}
           />
           {errors.email && touched.email && errors.email}
         </div>
@@ -58,6 +62,7 @@ function Contact() {
             onBlur={handleBlur}
             value={values.password}
             placeholder="Password"
+            disabled={isSubmitting}
           />
           {errors.password && touched.password && errors.password}
         </div>
@@ -69,11 +74,13 @@ function Contact() {
             onBlur={handleBlur}
             value={values.message}
             placeholder="Your message..."
+            disabled={isSubmitting}
           />
         </div>
         <button type="submit" disabled={isSubmitting}>
           Submit
         </button>
+        <button onClick={handleReset}>Reset</button>
       </form>
     </div>
   );
